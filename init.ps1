@@ -6,7 +6,7 @@ mkdir "vuln-list"
 Set-Location "vuln-list"
 git init
 git config core.protectNTFS false
-git config core.sparsecheckout true
+git config core.sparsecheckout true # for git 2.25 or later
 git config core.longpaths true
 git remote add origin "https://github.com/aquasecurity/vuln-list.git"
 Copy-Item "..\sparse-checkout" ".git\info"
