@@ -15,5 +15,8 @@ docker build -t vuls .
 # Execute vuls
 .\vuls.ps1 configtest -config="/vuls/config.toml"
 .\vuls.ps1 scan -config="/vuls/config.toml"
-
 ```
+
+## Integrate OWASP Dependency Check
+
+Check [dependency-check/README.md](dependency-check/README.md)!

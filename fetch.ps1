@@ -1,4 +1,9 @@
-# Step1. Fetch JVN
+# Step1. Fetch NVD
+2002..(Get-Date).Year | ForEach-Object {
+    docker run --rm -it -v "${PWD}:/vuls" -v "${PWD}\go-cve-dictionary-log:/var/log/vuls" "vuls/go-cve-dictionary" fetchnvd -years $_; 
+}
+
+# Step1.5. Fetch JVN
 2002..(Get-Date).Year | ForEach-Object {
     docker run --rm -it -v "${PWD}:/vuls" -v "${PWD}\go-cve-dictionary-log:/var/log/vuls" "vuls/go-cve-dictionary" fetchjvn -years $_; 
 }

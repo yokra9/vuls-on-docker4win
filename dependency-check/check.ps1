@@ -1,0 +1,1 @@
+docker run --rm -v "${PWD}\target:/src:z" -v "${PWD}\data:/usr/share/dependency-check/data:z" -v "${PWD}\odc-reports:/report:z" "owasp/dependency-check" --scan "/src" --format "ALL" --project "TESTPROJ" --out "/report"
